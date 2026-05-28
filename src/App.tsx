@@ -90,6 +90,8 @@ function App() {
         className={`mic-button ${listening ? "recording" : ""}`}
         onMouseDown={handlePress}
         onMouseUp={handleRelease}
+        onTouchStart={handlePress}   // ← Add this
+        onTouchEnd={handleRelease}
       >
        <img src={micIcon} alt="Microphone" className="mic-icon" />
       </button>
